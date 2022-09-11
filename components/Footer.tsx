@@ -2,6 +2,7 @@ import * as React from 'react'
 import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
 import { FaZhihu } from '@react-icons/all-files/fa/FaZhihu'
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
+import { FaHackerNews } from '@react-icons/all-files/fa/FaHackerNews'
 import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
 import { FaEnvelopeOpenText } from '@react-icons/all-files/fa/FaEnvelopeOpenText'
 import { FaYoutube } from '@react-icons/all-files/fa/FaYoutube'
@@ -31,9 +32,13 @@ export const FooterImpl: React.FC = () => {
     setHasMounted(true)
   }, [])
 
+  const year = new Date().getFullYear()
+
   return (
     <footer className={styles.footer}>
-      <div className={styles.copyright}>Copyright 2022 {config.author}</div>
+      <div className={styles.copyright}>
+        Copyright © {year} {config.author}. All rights reserved.
+      </div>
 
       <div className={styles.settings}>
         {hasMounted && (
@@ -119,6 +124,18 @@ export const FooterImpl: React.FC = () => {
             rel='noopener noreferrer'
           >
             <FaYoutube />
+          </a>
+        )}
+
+        {config.hackernews && (
+          <a
+            className={styles.youtube}
+            href={`https://news.ycombinator.com/user?id=${config.hackernews}`}
+            title={`Hacker News ${config.hackernews}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaHackerNews />
           </a>
         )}
       </div>

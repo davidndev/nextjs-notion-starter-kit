@@ -57,6 +57,24 @@ const socialLinks: SocialLink[] = [
     )
   },
 
+  config.hackernews && {
+    name: 'hackernews',
+    href: `https://news.ycombinator.com/user?id=${config.hackernews}`,
+    title: `Hacker News ${config.hackernews}`,
+    icon: (
+      <svg
+        version='1.1'
+        xmlns='http://www.w3.org/2000/svg'
+        x='0px'
+        y='0px'
+        viewBox='0 0 1000 1000'
+        enable-background='new 0 0 1000 1000'
+      >
+        <path d='M10,22.3v955.4h980V22.3H10z M562.6,488.8v323.7H437.4V488.8L243,172.8l144.5-0.7c0,0,114.8,203.4,115.5,204.2h2.2c0.8-0.8,118.5-203.4,118.5-203.4h133.4L562.6,488.8z' />
+      </svg>
+    )
+  },
+
   config.youtube && {
     name: 'youtube',
     href: `https://www.youtube.com/${config.youtube}`,

@@ -21,6 +21,7 @@ export default siteConfig({
   twitter: 'DavidNDev',
   github: 'davidndev',
   linkedin: 'davidnguyen20',
+  hackernews: 'davidn20',
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
 
