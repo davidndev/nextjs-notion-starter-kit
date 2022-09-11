@@ -346,6 +346,11 @@
 .notion-page-icon-hero.notion-page-icon-image {
   border-radius: 50%;
   box-shadow: 0 8px 40px 0 rgb(0 0 0 / 21%);
+  width: 15em;
+  height: 15em;
+  left: 50%;
+  transform: translate(-50%);
+  margin-left: 0px;
 }
 .notion-page-icon-hero.notion-page-icon-image span,
 .notion-page-icon-hero.notion-page-icon-image img {
@@ -381,4 +386,14 @@
 
 .notion-block-260baa77f1e1428b97fb14ac99c7c385 {
   display: none;
+}
+
+/* Adjust margin top to account for larger icon image*/
+.notion-page-no-cover.notion-page-has-image-icon {
+  padding-top: 16em;
+}
+
+/* Center Home Page Description*/
+.notion-block-cf0ca87a08bd457785c6349dc310327c {
+  text-align: center;
 }
