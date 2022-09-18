@@ -19,7 +19,7 @@ export default siteConfig({
 
   // social usernames (optional)
   twitter: 'DavidNDev',
-  github: 'davidndev',
+  //github: 'davidndev',
   linkedin: 'davidnguyen20',
   hackernews: 'davidn20',
   // newsletter: '#', // optional newsletter URL
