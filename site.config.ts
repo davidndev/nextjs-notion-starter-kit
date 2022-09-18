@@ -43,24 +43,24 @@ export default siteConfig({
   // any pages defined here will override their default URL paths
   // example:
   //
-  // pageUrlOverrides: {
-  //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
-  //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
-  // }
-  pageUrlOverrides: null,
+  pageUrlOverrides: {
+    '/now': 'a2906643c6e449f2b4cc19b6755ba5f9',
+    '/about': '7ed65c833c97436390a662bb3fe2f7b8'
+  },
+  // pageUrlOverrides: null,
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages
-  navigationStyle: 'default'
-  // navigationStyle: 'custom',
-  // navigationLinks: [
-  //   {
-  //     title: 'About',
-  //     pageId: 'f1199d37579b41cbabfc0b5174f4256a'
-  //   },
-  //   {
-  //     title: 'Contact',
-  //     pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
-  //   }
-  // ]
+  //navigationStyle: 'default',
+  navigationStyle: 'custom',
+  navigationLinks: [
+    {
+      title: 'Now',
+      pageId: 'a2906643c6e449f2b4cc19b6755ba5f9'
+    },
+    {
+      title: 'About',
+      pageId: '7ed65c833c97436390a662bb3fe2f7b8'
+    }
+  ]
 })
