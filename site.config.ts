@@ -22,6 +22,7 @@ export default siteConfig({
   //github: 'davidndev',
   linkedin: 'davidnguyen20',
   hackernews: 'davidn20',
+  // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
 

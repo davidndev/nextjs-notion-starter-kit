@@ -17,6 +17,7 @@ export interface SiteConfig {
   youtube?: string
   zhihu?: string
   hackernews?: string
+  mastodon?: string;
 
   defaultPageIcon?: string | null
   defaultPageCover?: string | null
