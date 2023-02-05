@@ -18,7 +18,7 @@ export default siteConfig({
     'The Artesian is a 16-story condo tower with great river views in Memphis, TN.',
 
   // social usernames (optional)
-  twitter: 'ArtesianCondos',
+  //twitter: 'ArtesianCondos',
   //github: 'transitive-bullshit',
   //linkedin: 'fisch2',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
@@ -51,16 +51,16 @@ export default siteConfig({
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages
-  navigationStyle: 'default'
-  // navigationStyle: 'custom',
-  // navigationLinks: [
-  //   {
-  //     title: 'About',
-  //     pageId: 'f1199d37579b41cbabfc0b5174f4256a'
-  //   },
-  //   {
-  //     title: 'Contact',
-  //     pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
-  //   }
-  // ]
+  //navigationStyle: 'default'
+  navigationStyle: 'custom',
+  navigationLinks: [
+    {
+      title: 'Posts',
+      pageId: 'f1adf92c2c7940e3b6c90aeb15c9f8e2'
+    },
+    {
+      title: 'Calendar',
+      pageId: 'a3cfedc7fed644c082e84502a22ae6d7'
+    }
+  ]
 })
