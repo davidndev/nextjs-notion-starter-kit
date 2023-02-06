@@ -44,11 +44,11 @@ export default siteConfig({
   // any pages defined here will override their default URL paths
   // example:
   //
-  pageUrlOverrides: {
-    '/now': 'a2906643c6e449f2b4cc19b6755ba5f9',
-    '/about': '7ed65c833c97436390a662bb3fe2f7b8'
-  },
-  // pageUrlOverrides: null,
+  // pageUrlOverrides: {
+  //   '/now': 'a2906643c6e449f2b4cc19b6755ba5f9',
+  //   '/about': '7ed65c833c97436390a662bb3fe2f7b8'
+  // },
+  pageUrlOverrides: null,
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages
