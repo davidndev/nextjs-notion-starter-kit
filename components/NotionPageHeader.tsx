@@ -66,13 +66,13 @@ export const NotionPageHeader: React.FC<{
                 )
               } else {
                 return (
-                  <components.PageLink
+                  <components.Link
                     href={link.url}
                     key={index}
                     className={cs(styles.navLink, 'breadcrumb', 'button')}
                   >
                     {link.title}
-                  </components.PageLink>
+                  </components.Link>
                 )
               }
             })
