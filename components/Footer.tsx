@@ -142,7 +142,7 @@ export const FooterImpl: React.FC = () => {
 
         {config.hackernews && (
           <a
-            className={styles.youtube}
+            className={styles.hackernews}
             href={`https://news.ycombinator.com/user?id=${config.hackernews}`}
             title={`Hacker News ${config.hackernews}`}
             target='_blank'
