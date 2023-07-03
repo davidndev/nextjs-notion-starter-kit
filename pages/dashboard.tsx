@@ -1,23 +1,52 @@
 import * as React from 'react'
-import BodyClassName from 'react-body-classname'
-import { useSearchParam } from 'react-use'
+import { GetStaticProps } from 'next'
 
 // utils
 import { useDarkMode } from 'lib/use-dark-mode'
+import { PageBlock } from 'notion-types'
+import { useSearchParam } from 'react-use'
 
+import { domain, isDev } from '@/lib/config'
+import { resolveNotionPage } from '@/lib/resolve-notion-page'
+import { PageProps, Params } from '@/lib/types'
+
+import { NotionPageHeader } from '../components/NotionPageHeader'
 // components
 import { PageHead } from '../components/PageHead'
-
 import styles from './styles.module.css'
 
-function Dashboard() {
+export const getStaticProps: GetStaticProps<PageProps, Params> = async (
+  context
+) => {
+  try {
+    const props = await resolveNotionPage(domain)
+
+    return { props, revalidate: 10 }
+  } catch (err) {
+    console.error('page error', domain, err)
+
+    // we don't want to publish the error version of this page, so
+    // let next.js know explicitly that incremental SSG failed
+    throw err
+  }
+}
+
+function Dashboard(props) {
   const lite = useSearchParam('lite')
   // lite mode is for oembed
   const isLiteMode = lite === 'true'
   const { isDarkMode } = useDarkMode()
+
+  console.log({ props })
+  const site = props
+
+  const keys = Object.keys(site.recordMap?.block || {})
+  const block = site.recordMap?.block?.[keys[0]]?.value
   return (
     <>
       <PageHead
+        pageId={site.rootNotionPageId}
+        site={site}
         title={'Dashboard'}
         description={
           'David Nguyen is a software engineer, consumer of information, and sporadic writer.'
@@ -28,6 +57,7 @@ function Dashboard() {
           isDarkMode ? 'dark-mode' : 'light-mode'
         }`}
       >
+        <NotionPageHeader block={block} />
         <h1>Dashboard</h1>
       </div>
     </>
