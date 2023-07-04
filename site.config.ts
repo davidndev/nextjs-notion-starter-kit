@@ -38,7 +38,7 @@ export default siteConfig({
   // whether or not redis is enabled for caching generated preview images (optional)
   // NOTE: if you enable redis, you need to set the `REDIS_HOST` and `REDIS_PASSWORD`
   // environment variables. see the readme for more info
-  isRedisEnabled: true,
+  isRedisEnabled: false, //temp false while developing
 
   //Search Config
   isSearchEnabled: false,
@@ -58,6 +58,10 @@ export default siteConfig({
   //navigationStyle: 'default',
   navigationStyle: 'custom',
   navigationLinks: [
+    {
+      title: 'Dashboard',
+      url: '/dashboard'
+    },
     {
       title: 'Blog',
       pageId: '3abcc1ea343c4642808a40655bcd6699'
