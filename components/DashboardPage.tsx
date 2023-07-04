@@ -17,6 +17,7 @@ import { getCanonicalPageUrl, mapPageUrl } from '@/lib/map-page-url'
 
 // components
 import { PageHead } from '../components/PageHead'
+import { Footer } from './Footer'
 
 export const DashboardPage: React.FC<types.PageProps> = ({
   site,
@@ -72,6 +73,13 @@ export const DashboardPage: React.FC<types.PageProps> = ({
         }`}
       >
         <DashboardPageHeader block={block} />
+        <div className='notion-page-scroller'>
+          <main className='notion-page notion-full-page'>
+            <h1>Dashboard</h1>
+          </main>
+        </div>
+
+        <Footer />
       </div>
     </>
   )
