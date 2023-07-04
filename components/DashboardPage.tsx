@@ -27,7 +27,7 @@ export const DashboardPage: React.FC<types.PageProps> = ({
   const { isDarkMode } = useDarkMode()
 
   const keys = Object.keys(recordMap?.block || {})
-  const block = recordMap?.block?.[keys[0]]?.value
+  const block = recordMap?.block?.[keys[0]]?.value as types.PageBlock
 
   const canonicalPageUrl =
     !config.isDev && getCanonicalPageUrl(site, recordMap)(site.rootNotionPageId)

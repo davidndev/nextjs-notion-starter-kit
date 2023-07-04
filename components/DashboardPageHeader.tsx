@@ -1,17 +1,18 @@
 import * as React from 'react'
-import Image from 'next/image'
 
 import * as types from 'notion-types'
 import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
 import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
 import cs from 'classnames'
-import CSS from 'csstype'
-import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
+import { Header, Search, useNotionContext } from 'react-notion-x'
 
 import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
 import styles from './styles.module.css'
+
+// I copied NotionPageHeader because I couldn't figure out how to the logo section to display.
+// So, I custom built it
 
 const ToggleThemeButton = () => {
   const [hasMounted, setHasMounted] = React.useState(false)
