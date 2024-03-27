@@ -35,8 +35,6 @@ export const FooterImpl: React.FC = () => {
     setHasMounted(true)
   }, [])
 
-  const year = new Date().getFullYear()
-
   return (
     <footer className={styles.footer}>
       <div className={styles.copyright}>Copyright {currentYear} {config.author}</div>
